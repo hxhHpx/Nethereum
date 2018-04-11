@@ -14,7 +14,7 @@ namespace Nethereum.Hex.HexTypes
         public override object ReadJson(JsonReader reader, Type objectType, object existingValue,
             JsonSerializer serializer)
         {
-            return HexTypeFactory.CreateFromHex<TValue>((string) reader.Value);
+            return HexTypeFactory.CreateFromHex<TValue>(reader.Value.ToString());
         }
 
         public override bool CanConvert(Type objectType)
